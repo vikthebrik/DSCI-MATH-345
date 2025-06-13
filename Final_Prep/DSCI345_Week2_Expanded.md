@@ -19,9 +19,7 @@ $$
 - Mean: $\mathbb{E}[X] = \lambda$
 - Variance: $\text{Var}(X) = \lambda$
 - Additive: If $X \sim \text{Poisson}(\lambda_1)$ and $Y \sim \text{Poisson}(\lambda_2)$ independently, then:
-  $$
-  X + Y \sim \text{Poisson}(\lambda_1 + \lambda_2)
-  $$
+  $X + Y \sim \text{Poisson}(\lambda_1 + \lambda_2)$
 
 ### Use Cases
 - Number of emails per hour.
@@ -36,9 +34,7 @@ $$
 - Memoryless: $\mathbb{P}(X > s + t \mid X > s) = \mathbb{P}(X > t)$
 
 ### Probability Density Function (PDF)
-$$
-f(x) = \lambda e^{-\lambda x}, \quad x \ge 0
-$$
+$f(x) = \lambda e^{-\lambda x}, \quad x \ge 0$
 
 ### Key Properties
 - Mean: $\mathbb{E}[X] = \frac{1}{\lambda}$
@@ -55,9 +51,7 @@ $$
 - $X \sim \text{Gamma}(k, \theta)$ (shape = $k$, scale = $\theta$)
 
 ### PDF
-$$
-f(x) = \frac{1}{\Gamma(k)\theta^k} x^{k - 1} e^{-x/\theta}, \quad x \ge 0
-$$
+$f(x) = \frac{1}{\Gamma(k)\theta^k} x^{k - 1} e^{-x/\theta}, \quad x \ge 0$
 
 ### Properties
 - Mean: $\mathbb{E}[X] = k\theta$
@@ -70,9 +64,7 @@ $$
 
 - If $X \sim \text{Exp}(\lambda)$ then $X \sim \text{Gamma}(1, 1/\lambda)$
 - If $X_1, ..., X_k \overset{iid}{\sim} \text{Exp}(\lambda)$, then:
-  $$
-  \sum_{i=1}^k X_i \sim \text{Gamma}(k, 1/\lambda)
-  $$
+  $\sum_{i=1}^k X_i \sim \text{Gamma}(k, 1/\lambda)$
 
 ---
 
