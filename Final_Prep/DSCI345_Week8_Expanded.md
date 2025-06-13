@@ -14,9 +14,7 @@
 ## 🔹 Bernoulli Distribution
 
 ### PMF
-$$
-\mathbb{P}(Y = y) = p^y (1 - p)^{1 - y}, \quad y \in \{0, 1\}
-$$
+$\mathbb{P}(Y = y) = p^y (1 - p)^{1 - y}, \quad y \in \{0, 1\}$
 
 ### Properties
 - $\mathbb{E}[Y] = p$
@@ -33,9 +31,7 @@ $$
 ### Model
 - $\log\left( \frac{p_i}{1 - p_i} \right) = x_i^T \beta$ (log-odds)
 - Inverse link (sigmoid function):
-  $$
-  p_i = \frac{e^{x_i^T \beta}}{1 + e^{x_i^T \beta}} = \frac{1}{1 + e^{-x_i^T \beta}}
-  $$
+  $p_i = \frac{e^{x_i^T \beta}}{1 + e^{x_i^T \beta}} = \frac{1}{1 + e^{-x_i^T \beta}}$
 
 ### Interpretation of Coefficients
 - A one-unit increase in $x_j$ leads to a change in the log-odds of outcome by $\beta_j$
@@ -46,9 +42,7 @@ $$
 ## 🔹 Log-Likelihood
 
 ### Bernoulli Log-Likelihood
-$$
-\ell(\beta) = \sum_{i=1}^n \left[ y_i \log(p_i) + (1 - y_i) \log(1 - p_i) \right]
-$$
+$\ell(\beta) = \sum_{i=1}^n \left[ y_i \log(p_i) + (1 - y_i) \log(1 - p_i) \right]$
 
 - Concave function: guarantees a global maximum
 - Solved using gradient-based optimization (e.g., Newton-Raphson or IRLS)
@@ -62,9 +56,7 @@ $$
   - Compute $p_i = \frac{1}{1 + e^{-x_i^T \beta}}$
   - Construct weights $W_i = p_i (1 - p_i)$
   - Update:
-    $$
-    \beta^{(t+1)} = (X^T W X)^{-1} X^T W z
-    $$
+    $\beta^{(t+1)} = (X^T W X)^{-1} X^T W z$
     where $z$ is the adjusted dependent variable
 
 ---
