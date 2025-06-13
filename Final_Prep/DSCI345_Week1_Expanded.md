@@ -21,9 +21,7 @@
 ### Bernoulli Distribution
 - **Definition**: A trial with only two outcomes: success (1) or failure (0).
 - **PMF**:
-  $$
-  \mathbb{P}(X = x) = p^x (1 - p)^{1 - x}, \quad x \in \{0, 1\}
-  $$
+  $\mathbb{P}(X = x) = p^x (1 - p)^{1 - x}, \quad x \in \{0, 1\}$
 - **Support**: $x = 0, 1$
 - **Mean**: $\mathbb{E}[X] = p$
 - **Variance**: $\text{Var}(X) = p(1 - p)$
@@ -38,9 +36,7 @@
 - **Definition**: Sum of $n$ independent Bernoulli trials with same success probability $p$.
 - $X \sim \text{Bin}(n, p)$
 - **PMF**:
-  $$
-  \mathbb{P}(X = k) = \binom{n}{k} p^k (1 - p)^{n - k}
-  $$
+  $\mathbb{P}(X = k) = \binom{n}{k} p^k (1 - p)^{n - k}$
 - **Support**: $k = 0, 1, ..., n$
 - **Mean**: $np$
 - **Variance**: $np(1 - p)$
@@ -54,9 +50,7 @@
 - **Definition**: Counts the number of events in a fixed interval (time, space), given they occur independently.
 - $X \sim \text{Poisson}(\lambda)$
 - **PMF**:
-  $$
-  \mathbb{P}(X = k) = \frac{\lambda^k e^{-\lambda}}{k!}
-  $$
+  $\mathbb{P}(X = k) = \frac{\lambda^k e^{-\lambda}}{k!}$
 - **Support**: $k = 0, 1, 2, \dots$
 - **Mean** = Variance = $\lambda$
 
@@ -69,25 +63,19 @@
 
 ### Expected Value (Mean)
 - Definition:
-  $$
-  \mathbb{E}[X] = \sum_{x} x \cdot \mathbb{P}(X = x)
-  $$
+  $\mathbb{E}[X] = \sum_{x} x \cdot \mathbb{P}(X = x)$
 - For functions: $\mathbb{E}[g(X)] = \sum_x g(x) \cdot \mathbb{P}(X = x)$
 
 ### Variance
 - Definition:
-  $$
-  \text{Var}(X) = \mathbb{E}[X^2] - (\mathbb{E}[X])^2
-  $$
+  $\text{Var}(X) = \mathbb{E}[X^2] - (\mathbb{E}[X])^2$
 
 ---
 
 ## 🔹 Moment Generating Functions (MGFs)
 
 - **MGF** of a discrete random variable $X$:
-  $$
-  M_X(t) = \mathbb{E}[e^{tX}] = \sum_{x} e^{tx} \cdot \mathbb{P}(X = x)
-  $$
+  $M_X(t) = \mathbb{E}[e^{tX}] = \sum_{x} e^{tx} \cdot \mathbb{P}(X = x)$
 - Properties:
   - $M_X'(0) = \mathbb{E}[X]$
   - $M_X''(0) = \mathbb{E}[X^2]$
@@ -98,21 +86,15 @@
 
 ### Independent RVs
 - $X$ and $Y$ are independent if:
-  $$
-  \mathbb{P}(X = x, Y = y) = \mathbb{P}(X = x) \cdot \mathbb{P}(Y = y)
-  $$
+  $\mathbb{P}(X = x, Y = y) = \mathbb{P}(X = x) \cdot \mathbb{P}(Y = y)$
 
 ### Additivity of Expectation
 - Always holds:
-  $$
-  \mathbb{E}[X + Y] = \mathbb{E}[X] + \mathbb{E}[Y]
-  $$
+  $\mathbb{E}[X + Y] = \mathbb{E}[X] + \mathbb{E}[Y]$
 
 ### Additivity of Variance
 - Only if $X$ and $Y$ are independent:
-  $$
-  \text{Var}(X + Y) = \text{Var}(X) + \text{Var}(Y)
-  $$
+  $\text{Var}(X + Y) = \text{Var}(X) + \text{Var}(Y)$
 
 ---
 
