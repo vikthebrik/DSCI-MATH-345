@@ -8,9 +8,7 @@
 ### Deviance
 - Deviance measures the goodness-of-fit for GLMs by comparing the fitted model to a saturated model (perfect fit).
 - Formula:
-  $$
-  D = 2 \left[ \ell(\text{saturated model}) - \ell(\text{fitted model}) \right]
-  $$
+  $D = 2 \left[ \ell(\text{saturated model}) - \ell(\text{fitted model}) \right]$
 
 ### Null Deviance vs Residual Deviance
 - **Null Deviance**: Deviance from a model with only the intercept (no predictors).
@@ -22,16 +20,12 @@
 ## 🔹 Information Criteria
 
 ### AIC – Akaike Information Criterion
-$$
-\text{AIC} = 2k - 2 \log(\hat{L})
-$$
+$\text{AIC} = 2k - 2 \log(\hat{L})$
 - $k$: number of parameters in the model
 - $\hat{L}$: maximized value of the likelihood function
 
 ### BIC – Bayesian Information Criterion
-$$
-\text{BIC} = k \log(n) - 2 \log(\hat{L})
-$$
+$\text{BIC} = k \log(n) - 2 \log(\hat{L})$
 - $n$: number of observations
 - BIC penalizes complex models more heavily than AIC
 
@@ -71,9 +65,7 @@ $$
 ### Leverage and Cook’s Distance
 - Leverage measures influence of a data point’s $x_i$ on fitted $\hat{y}_i$
 - Cook’s Distance combines leverage and residuals:
-  $$
-  D_i = \frac{(r_i^2 h_{ii})}{p \cdot MSE (1 - h_{ii})^2}
-  $$
+  $D_i = \frac{(r_i^2 h_{ii})}{p \cdot MSE (1 - h_{ii})^2}$
 
 ---
 
@@ -81,9 +73,7 @@ $$
 
 ### Pearson Chi-Square Statistic
 - Estimate overdispersion factor:
-  $$
-  \hat{\phi} = \frac{1}{n - p} \sum_{i=1}^n \left( \frac{y_i - \mu_i}{\sqrt{V(\mu_i)}} \right)^2
-  $$
+  $\hat{\phi} = \frac{1}{n - p} \sum_{i=1}^n \left( \frac{y_i - \mu_i}{\sqrt{V(\mu_i)}} \right)^2$
 - $\hat{\phi} > 1$ suggests overdispersion
 
 ### Consequences of Ignoring Overdispersion
@@ -96,9 +86,7 @@ $$
 
 ### Likelihood Ratio Test
 - Compare two nested models:
-  $$
-  D = 2(\ell_{\text{full}} - \ell_{\text{reduced}})
-  $$
+  $D = 2(\ell_{\text{full}} - \ell_{\text{reduced}})$
 - $D \sim \chi^2_{df}$ under the null hypothesis
 - Degrees of freedom = difference in number of parameters
 
