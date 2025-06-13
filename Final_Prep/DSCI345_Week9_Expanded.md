@@ -17,15 +17,11 @@
 - Under regularity conditions, MLEs are:
   - **Consistent**: $\hat{\beta} \xrightarrow{p} \beta$
   - **Asymptotically normal**:
-    $$
-    \hat{\beta} \sim \mathcal{N}\left(\beta, \mathcal{I}(\beta)^{-1}\right)
-    $$
+    $\hat{\beta} \sim \mathcal{N}\left(\beta, \mathcal{I}(\beta)^{-1}\right)$
 
 ### Fisher Information
 - $\mathcal{I}(\beta)$ is the expected curvature of the log-likelihood:
-  $$
-  \mathcal{I}(\beta) = -\mathbb{E}[\nabla^2 \ell(\beta)]
-  $$
+  $\mathcal{I}(\beta) = -\mathbb{E}[\nabla^2 \ell(\beta)]$
 - Estimated by observed information matrix from second derivative
 
 ---
@@ -33,17 +29,13 @@
 ## 🔹 Standard Errors and Confidence Intervals
 
 ### Variance of $\hat{\beta}$
-$$
-\text{Var}(\hat{\beta}) \approx \left( X^T W X \right)^{-1}
-$$
+$\text{Var}(\hat{\beta}) \approx \left( X^T W X \right)^{-1}$
 
 ### Standard Error
-- $\text{SE}(\hat{\beta}_j) = \sqrt{[\text{Var}(\hat{\beta})]_{jj}}$
+$\text{SE}(\hat{\beta}_j) = \sqrt{[\text{Var}(\hat{\beta})]_{jj}}$
 
 ### Confidence Interval (CI)
-$$
-\hat{\beta}_j \pm z_{\alpha/2} \cdot \text{SE}(\hat{\beta}_j)
-$$
+$\hat{\beta}_j \pm z_{\alpha/2} \cdot \text{SE}(\hat{\beta}_j)$
 
 - Common choice: 95% CI uses $z = 1.96$
 
@@ -54,17 +46,13 @@ $$
 ### Wald Test (Z-Test)
 - Test $H_0: \beta_j = 0$
 - Test statistic:
-  $$
-  z_j = \frac{\hat{\beta}_j}{\text{SE}(\hat{\beta}_j)} \sim \mathcal{N}(0, 1)
-  $$
+  $z_j = \frac{\hat{\beta}_j}{\text{SE}(\hat{\beta}_j)} \sim \mathcal{N}(0, 1)$
 - p-value = $2(1 - \Phi(|z_j|))$
 
 ### Likelihood Ratio Test (LRT)
 - Compare full model vs. reduced model (dropping one or more coefficients)
 - Test statistic:
-  $$
-  D = 2 \left[ \ell_{\text{full}} - \ell_{\text{reduced}} \right] \sim \chi^2_{df}
-  $$
+  $D = 2 \left[ \ell_{\text{full}} - \ell_{\text{reduced}} \right] \sim \chi^2_{df}$
 
 ### Score Test (Lagrange Multiplier Test)
 - Uses derivative of likelihood at null value
