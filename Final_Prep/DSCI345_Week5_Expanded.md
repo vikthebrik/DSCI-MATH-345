@@ -26,16 +26,12 @@
 ### Distribution
 - $Y_i \sim \text{Poisson}(\mu_i)$
 - PMF: 
-  $$
-  \mathbb{P}(Y_i = y_i) = \frac{\mu_i^{y_i} e^{-\mu_i}}{y_i!}, \quad y_i \in \{0,1,2,\ldots\}
-  $$
+  $\mathbb{P}(Y_i = y_i) = \frac{\mu_i^{y_i} e^{-\mu_i}}{y_i!}, \quad y_i \in \{0,1,2,\ldots\}$
 
 ### Link Function
 - Canonical link: $g(\mu) = \log(\mu)$
 - Model becomes:
-  $$
-  \log(\mu_i) = x_i^T \beta \quad \Rightarrow \quad \mu_i = \exp(x_i^T \beta)
-  $$
+  $\log(\mu_i) = x_i^T \beta \quad \Rightarrow \quad \mu_i = \exp(x_i^T \beta)$
 
 ---
 
@@ -43,16 +39,12 @@
 
 ### Poisson Log-Likelihood
 Given $Y_i \sim \text{Poisson}(\mu_i = \exp(x_i^T \beta))$:
-$$
-\ell(\beta) = \sum_{i=1}^n \left[ y_i x_i^T \beta - \exp(x_i^T \beta) - \log(y_i!) \right]
-$$
+$\ell(\beta) = \sum_{i=1}^n \left[ y_i x_i^T \beta - \exp(x_i^T \beta) - \log(y_i!) \right]$
 
 ### Score and Information
 - **Score Function** (gradient): $\nabla_\beta \ell(\beta)$
 - **Fisher Information**:
-  $$
-  \mathcal{I}(\beta) = X^T W X, \quad \text{where } W_i = \mu_i
-  $$
+  $\mathcal{I}(\beta) = X^T W X, \quad \text{where } W_i = \mu_i$
 
 ---
 
@@ -61,9 +53,7 @@ $$
 ### Iteratively Reweighted Least Squares (IRLS)
 - Used to solve $\hat{\beta}$ that maximizes $\ell(\beta)$
 - Updates of the form:
-  $$
-  \beta^{(t+1)} = (X^T W X)^{-1} X^T W z
-  $$
+  $\beta^{(t+1)} = (X^T W X)^{-1} X^T W z$
   - $W$: weights from current $\mu$
   - $z$: adjusted dependent variable (working response)
 
@@ -85,13 +75,9 @@ $$
 
 ### Residuals
 - **Deviance Residual**:
-  $$
-  r_i = \text{sign}(y_i - \hat{\mu}_i) \cdot \sqrt{2 \left( y_i \log\left(\frac{y_i}{\hat{\mu}_i}\right) - (y_i - \hat{\mu}_i) \right)}
-  $$
+  $r_i = \text{sign}(y_i - \hat{\mu}_i) \cdot \sqrt{2 \left( y_i \log\left(\frac{y_i}{\hat{\mu}_i}\right) - (y_i - \hat{\mu}_i) \right)}$
 - **Pearson Residual**:
-  $$
-  r_i = \frac{y_i - \hat{\mu}_i}{\sqrt{\hat{\mu}_i}}
-  $$
+  $r_i = \frac{y_i - \hat{\mu}_i}{\sqrt{\hat{\mu}_i}}$
 
 ---
 
