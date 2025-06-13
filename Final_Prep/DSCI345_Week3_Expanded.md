@@ -7,19 +7,13 @@
 
 ### Definition
 - The **conditional probability** of $A$ given $B$:
-  $$
-  \mathbb{P}(A \mid B) = \frac{\mathbb{P}(A \cap B)}{\mathbb{P}(B)}
-  $$
+  $\mathbb{P}(A \mid B) = \frac{\mathbb{P}(A \cap B)}{\mathbb{P}(B)}$
 
 ### Conditional PMF/PDF
 - For discrete RVs:
-  $$
-  \mathbb{P}(X = x \mid Y = y) = \frac{\mathbb{P}(X = x, Y = y)}{\mathbb{P}(Y = y)}
-  $$
+  $\mathbb{P}(X = x \mid Y = y) = \frac{\mathbb{P}(X = x, Y = y)}{\mathbb{P}(Y = y)}$
 - For continuous RVs:
-  $$
-  f_{X|Y}(x \mid y) = \frac{f_{X,Y}(x, y)}{f_Y(y)}
-  $$
+  $f_{X|Y}(x \mid y) = \frac{f_{X,Y}(x, y)}{f_Y(y)}$
 
 ---
 
@@ -59,9 +53,7 @@
 - $\text{Var}(X \mid Y = y) = \mathbb{E}[(X - \mathbb{E}[X \mid Y = y])^2 \mid Y = y]$
 
 ### Law of Total Variance
-$$
-\text{Var}(X) = \mathbb{E}[\text{Var}(X \mid Y)] + \text{Var}(\mathbb{E}[X \mid Y])
-$$
+$\text{Var}(X) = \mathbb{E}[\text{Var}(X \mid Y)] + \text{Var}(\mathbb{E}[X \mid Y])$
 
 ---
 
