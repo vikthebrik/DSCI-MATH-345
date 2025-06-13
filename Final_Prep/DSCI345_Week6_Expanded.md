@@ -45,9 +45,7 @@ $$
 
 ### Log-Likelihood
 For log link function and $\mu_i = e^{x_i^T\beta}$, the log-likelihood becomes:
-$$
-\ell(\beta) = \sum_{i=1}^n \left[ \alpha \log(\alpha) - \log(\Gamma(\alpha)) - \alpha \log(\mu_i) - \frac{\alpha y_i}{\mu_i} \right]
-$$
+$\ell(\beta) = \sum_{i=1}^n \left[ \alpha \log(\alpha) - \log(\Gamma(\alpha)) - \alpha \log(\mu_i) - \frac{\alpha y_i}{\mu_i} \right]$
 
 ### Estimation Method
 - Use **Iteratively Reweighted Least Squares (IRLS)** to maximize the log-likelihood.
@@ -69,14 +67,10 @@ print(model.summary())
 ## 🔹 Residuals for Gamma GLMs
 
 ### Deviance Residual
-$$
-r_i = \text{sign}(y_i - \mu_i) \cdot \sqrt{2 \left[ \frac{y_i - \mu_i}{\mu_i} - \log\left(\frac{y_i}{\mu_i}\right) \right]}
-$$
+$r_i = \text{sign}(y_i - \mu_i) \cdot \sqrt{2 \left[ \frac{y_i - \mu_i}{\mu_i} - \log\left(\frac{y_i}{\mu_i}\right) \right]}$
 
 ### Pearson Residual
-$$
-r_i = \frac{y_i - \mu_i}{\mu_i}
-$$
+$r_i = \frac{y_i - \mu_i}{\mu_i}$
 
 ---
 
@@ -84,9 +78,7 @@ $$
 
 ### Definition
 - Overdispersion occurs when:
-  $$
-  \text{Observed Variance} > \text{Theoretical Variance}
-  $$
+  $\text{Observed Variance} > \text{Theoretical Variance}$
 
 ### Fixes
 - Use **quasi-likelihood** methods
@@ -97,9 +89,7 @@ $$
 ## 🔹 Model Selection and AIC
 
 ### Akaike Information Criterion (AIC)
-$$
-\text{AIC} = 2k - 2\log(\hat{L})
-$$
+$\text{AIC} = 2k - 2\log(\hat{L})$
 - Lower AIC indicates better model (penalizes model complexity)
 
 ### Compare Models
